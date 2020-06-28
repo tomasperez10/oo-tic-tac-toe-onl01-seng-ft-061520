@@ -71,7 +71,9 @@ end
     @board.all?{|occupied| occupied != " "}
   end
   
-  
+  def draw?
+  !(won?) && (full?)
+  end
   
  
   def turn_count
