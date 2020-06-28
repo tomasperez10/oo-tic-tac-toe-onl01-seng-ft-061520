@@ -44,8 +44,6 @@ class TicTacToe
     @board[index] = token
   end
 
-  # #current_player checks which turn it is to determine if it's X or O's turn
-  # Called by #move and by #turn
   def current_player
     turn_count % 2 == 0 ? "X" : "O"
   end
