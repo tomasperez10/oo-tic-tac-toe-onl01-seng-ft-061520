@@ -36,8 +36,6 @@ class TicTacToe
     index.between?(0,8) && !position_taken?(index)
   end
 
-  # #position_taken? checks to see if a position on the board is already occupied by an "X" or "O".
-  # Called by #valid_move
   def position_taken?(index)
     !(@board[index].nil? || @board[index] == " ")
   end
