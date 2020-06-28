@@ -14,16 +14,14 @@ class TicTacToe
     # If yes, then #play again
     gets.strip.downcase == "y" || gets.strip.downcase == "yes" ? play : puts("Goodbye!")
   end
-
-  # #turn gets the player's move, checks that the move is valid, then updates the board with the new move and finally displays the board.
-  # Called by #play
+  
   def turn
-    puts "Player #{current_player}, please enter a number 1-9:"
+    puts "Please enter 1-9:"
     input = gets.strip
     index = input_to_index(input)
-    cp = current_player
+    char = current_player
     if valid_move?(index)
-      move(index, cp)
+      move(index, char)
       display_board
     else
       turn
