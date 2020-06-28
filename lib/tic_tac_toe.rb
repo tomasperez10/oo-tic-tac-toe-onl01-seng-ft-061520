@@ -56,15 +56,19 @@ class TicTacToe
     end
 end
 
-def won?
-  WIN_COMBINATIONS.detect do |combinations|
-    if (@board[combinations[0]]) == "X" && (@board[combinations[1]]) == "X" && (@board[combinations[2]]) == "X"
-      return combinations
-    elsif (@board[combinations[0]]) == "O" && (@board[combinations[1]]) == "O" && (@board[combinations[2]]) == "O"
-      return combinations
+  def won?
+    WIN_COMBINATIONS.detect do |combinations|
+     if (@board[combinations[0]]) == "X" &&   (@board[combinations[1]]) == "X" &&   (@board[combinations[2]]) == "X"
+        return combinations
+      elsif (@board[combinations[0]]) == "O" &&   (@board[combinations[1]]) == "O" &&   (@board[combinations[2]]) == "O"
+        return combinations
+      end
+        false
     end
-      false
   end
+
+def full?
+  @board.all?{|occupied| occupied != " "}
 end
  
   def turn_count
