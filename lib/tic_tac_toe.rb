@@ -40,8 +40,6 @@ class TicTacToe
     !(@board[index].nil? || @board[index] == " ")
   end
 
-  # #move updates the board array with the current player's valid move choice
-  # Called by #turn
   def move(index, token = "X")
     @board[index] = token
   end
